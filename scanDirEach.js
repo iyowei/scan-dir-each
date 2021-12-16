@@ -1,7 +1,7 @@
 import { readdirSync } from "fs";
-import eachOf from "async/eachOf.js";
+import { join } from "path";
 
-import { resolveCwdSync } from "./resolveCwd.js";
+import eachOf from "async/eachOf.js";
 
 export default function scanDirEach(path, worker = () => true, raw = false) {
   return new Promise((resolve, reject) => {
@@ -33,7 +33,7 @@ export default function scanDirEach(path, worker = () => true, raw = false) {
       FILES,
       (dirent, index, cb) => {
         let pivot = {
-          path: resolveCwdSync({ relativePath: dirent.name, cwd: path }),
+          path: join(path, dirent.name),
           dirent,
         };
 
