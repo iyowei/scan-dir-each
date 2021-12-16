@@ -1,0 +1,13 @@
+lockfileVersion: 5.3
+
+specifiers:
+  async: ^3.2.2
+
+dependencies:
+  async: 3.2.2
+
+packages:
+
+  /async/3.2.2:
+    resolution: {integrity: sha1-LrdnEDS7IZTUXTDjHiTsfn+WcM0=, tarball: async/download/async-3.2.2.tgz}
+    dev: false
